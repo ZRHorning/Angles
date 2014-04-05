@@ -18,6 +18,7 @@
         var angles = [x, y, z];
         for (i = 0; i < angles.length; i++) {
           angles[i] = angles[i] * (180 / Math.PI);
+          angles[i] = angles[i].toPrecision(3);
         }
         return angles;
         
