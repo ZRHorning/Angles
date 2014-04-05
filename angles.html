@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      FUCKING TRIANGLES
+    </title>
+    
+    <script>
+      function sss(sideb, sidea, sidec) {
+        x = (Math.pow(sideb, 2) + Math.pow(sidec, 2) - Math.pow(sidea, 2)) / (2 * sideb * sidec);
+        //cos angle A
+        x = Math.acos(x);
+        //I AM USING THE MATHS WITH RADS
+        var y = (Math.pow(sidec, 2) + Math.pow(sidea, 2) - Math.pow(sideb, 2)) / (2 * sidec * sidea);
+        y = Math.acos(y);
+        var z = Math.PI - (x + y);
+        var angles = [x, y, z];
+        for (i = 0; i < angles.length; i++) {
+          angles[i] = angles[i] * (180 / Math.PI);
+        }
+        return angles;
+        
+      }
+      function AddDiv () {
+        var div = document.createElement ("div");
+        div.innerHTML = sss(side1.value,side2.value,side3.value);
+        var container = document.getElementById ("container");
+        container.appendChild (div);
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      Side1: 
+      <input type="text" name="side1" id="side1" onchange="AddDiv();" value="3">
+      
+      Side2: 
+      <input type="text" name="side2" id="side2" onchange="AddDiv();" value="4">
+      
+      Side3: 
+      <input type="text" name="side3" id="side3" onchange="AddDiv();" value="5">
+      <br>
+    </form>
+    <div id="container">
+    </div>
+  </body>
+</html>
