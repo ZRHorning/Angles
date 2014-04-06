@@ -28,16 +28,13 @@
         document.getElementById("container").innerHTML=thetriangletodom;
       }
        function Clear() {
-      //  var div = document.createElement ("div");
-        side1.value = "";
-        side2.value = "";
-        side3.value = "";
-        document.getElementById("container").reset();
+        document.getElementById("zeform").reset();
+        document.getElementById("container").innerHTML="";
       }
     </script>
   </head>
   <body>
-    <form>
+    <form id="zeform">
       Side1: 
       <input type="text" name="side1" id="side1" onchange="AddDiv();">
       
