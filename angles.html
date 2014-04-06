@@ -29,6 +29,13 @@
         var container = document.getElementById ("container");
         container.appendChild (div);
       }
+       function Clear() {
+        var div = document.createElement ("div");
+        side1.value = " ";
+        side2.value = " ";
+        side3.value = " ";
+        document.getElementById("div").reset();
+      }
     </script>
   </head>
   <body>
@@ -42,6 +49,9 @@
       Side3: 
       <input type="text" name="side3" id="side3" onchange="AddDiv();" value="5">
       <br>
+      <button type="button" onClick = "AddDiv()">Calculate</button>
+      <br>
+      <button type="button" onClick = "Clear()">Clear</button>
     </form>
     <div id="container">
     </div>
