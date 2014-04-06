@@ -24,10 +24,10 @@
         
       }
       function AddDiv () {
-        var div = document.createElement ("div");
-        div.innerHTML = sss(side1.value,side2.value,side3.value);
-        var container = document.getElementById ("container");
-        container.appendChild (div);
+        var div = document.createElement("div"); //makes div look like what follows =
+        div.innerHTML = sss(side1.value,side2.value,side3.value); // document.createElement("div").innerHTML(sss(side1.value,side2.value,side3.value)) UGH UGLY
+        var container = document.getElementById ("container"); //little hazy on how this works, it was like a trial and error thing
+        container.appendChild (div); //same with this part
       }
        function Clear() {
         var div = document.createElement ("div");
