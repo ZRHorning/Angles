@@ -20,19 +20,21 @@
           angles[i] = angles[i] * (180 / Math.PI);
           angles[i] = "<br/> Angle " + (i+1 + ": ") + angles[i].toPrecision(4);
         }
-      return angles;
+        return angles;
         
       }
       function AddDiv () {
-        thetriangletodom = sss(side1.value,side2.value,side3.value);
-        document.getElementById("container").innerHTML=thetriangletodom;
+        var div = document.createElement("div"); //makes div look like what follows =
+        div.innerHTML = sss(side1.value,side2.value,side3.value); // document.createElement("div").innerHTML(sss(side1.value,side2.value,side3.value)) UGH UGLY
+        var container = document.getElementById ("container"); //little hazy on how this works, it was like a trial and error thing
+        container.appendChild (div); //same with this part
       }
        function Clear() {
-      //  var div = document.createElement ("div");
-        side1.value = "";
-        side2.value = "";
-        side3.value = "";
-        document.getElementById("container").reset();
+        var div = document.createElement ("div");
+        side1.value = " ";
+        side2.value = " ";
+        side3.value = " ";
+        document.getElementById("div").reset();
       }
     </script>
   </head>
@@ -53,6 +55,7 @@
       <br>
       <input type="button" value="Reload page" onclick="location.reload();">
     </form>
-    <div id="container"></div>
+    <div id="container">
+    </div>
   </body>
 </html>
