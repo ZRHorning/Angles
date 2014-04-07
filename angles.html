@@ -6,6 +6,9 @@
       FUCKING TRIANGLES
     </title>
     <style type="text/css">
+    * {
+      font-family: Lato;
+    }
     form {
     position: relative;
     border-radius: 16px;
@@ -15,8 +18,15 @@
     button{
       background: url("featherweight_ui.jpg") no-repeat;
       background-position:-340px -510px;
+      border-style: none;
+      color: white;
       width: 150px;
-      height: 31px;
+      height: 30px;
+
+    }
+    button:hover{
+      background-position: -340px -545px;
+      transition-duration: 2s;
     }
     </style>
     
@@ -61,8 +71,7 @@
       <button type="button" onClick = "AddDiv()">Calculate</button>
       <br>
       <button type="button" onClick = "Clear()">Clear</button>
-      <br>
-      <input type="button" value="Reload page" onclick="location.reload();">
+
     </form>
     <div id="container"></div>
   </body>
