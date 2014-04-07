@@ -11,17 +11,24 @@
     }
     form {
     position: relative;
-    border-radius: 16px;
     border-style: solid;
+    border-radius: 16px;
     text-align: center;
     }
     button{
-      background: url("featherweight_ui.jpg") no-repeat;
-      background-position:-340px -510px;
-      border-style: none;
-      color: white;
       width: 150px;
       height: 30px;
+      border-style: none;
+      background: url("featherweight_ui.jpg") no-repeat;
+      background-position:-340px -510px;
+      color: white;
+
+    }
+    input{
+      width:129;
+      border-style: none;
+      background: url("featherweight_ui.jpg") no-repeat;
+      background-position: -652px -570px;
 
     }
     button:hover{
@@ -31,30 +38,32 @@
     </style>
     
     <script>
-      function sss(sideb, sidea, sidec) {
-        var angleb = (Math.pow(sideb, 2) + Math.pow(sidec, 2) - Math.pow(sidea, 2)) / (2 * sideb * sidec);
-        //cos angle A
-        angleb = Math.acos(angleb);
-        //I AM USING THE MATHS WITH RADS
-        var anglea = (Math.pow(sidec, 2) + Math.pow(sidea, 2) - Math.pow(sideb, 2)) / (2 * sidec * sidea);
-        anglea = Math.acos(anglea);
-        var anglec = Math.PI - (angleb + anglea);
-        var angles = [angleb, anglea, anglec];
-        for (i = 0; i < angles.length; i++) {
-          angles[i] = angles[i] * (180 / Math.PI);
-          angles[i] = "<br/> Angle " + (i+1 + ": ") + angles[i].toPrecision(4);
-        }
-      return angles;
-        
-      }
-      function AddDiv () {
-        thetriangletodom = sss(side1.value,side2.value,side3.value);
-        document.getElementById("container").innerHTML=thetriangletodom;
-      }
-       function Clear() {
-        document.getElementById("zeform").reset();
-        document.getElementById("container").innerHTML="";
-      }
+    function sss(sideb, sidea, sidec) {
+    var angleb = (Math.pow(sideb, 2) + Math.pow(sidec, 2) - Math.pow(sidea, 2)) / (2 * sideb * sidec);
+    //cos angle A
+    angleb = Math.acos(angleb);
+    //I AM USING THE MATHS WITH RADS
+    var anglea = (Math.pow(sidec, 2) + Math.pow(sidea, 2) - Math.pow(sideb, 2)) / (2 * sidec * sidea);
+    anglea = Math.acos(anglea);
+    var anglec = Math.PI - (angleb + anglea);
+    var angles = [angleb, anglea, anglec];
+    for (i = 0; i < angles.length; i++) {
+        angles[i] = angles[i] * (180 / Math.PI);
+        angles[i] = "<br/> Angle " + (i + 1 + ": ") + angles[i].toPrecision(4);
+    }
+    return angles;
+
+}
+
+function AddDiv() {
+    thetriangletodom = sss(side1.value, side2.value, side3.value);
+    document.getElementById("container").innerHTML = thetriangletodom;
+}
+
+function Clear() {
+    document.getElementById("zeform").reset();
+    document.getElementById("container").innerHTML = "";
+}
     </script>
   </head>
   <body>
