@@ -1,29 +1,35 @@
+*{
+  font-family: Lato;
+}
+body{
+  -moz-column-width: auto;
+  -moz-column-count: 3;
 
-    * {
-      font-family: Lato;
-    }
-    fieldset {
-    background-color: whitesmoke;
-    border-style: solid;
-    border-radius: 16px;
-    text-align: center;
-    }
-    button{
-      width: 150px;
-      height: 30px;
-      border-style: none;
-      /* background: url("featherweight_ui.jpg") no-repeat; */
-      /* background-position:-340px -510px; */
-      background-color: gray;
-      color: white;
-
-    }
-    input{
-      width:130px;
-      border-style: none;
-    }
-    button:hover{
-      background-color: lightgrey;
-      transition-duration: 2s;
-            
-    }
+}
+fieldset {
+  background-color: whitesmoke;
+  border-style: solid;
+  border-radius: 16px;
+  text-align: center;
+    display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  width: 150px;
+  height: 30px;
+  padding-right: 0px;
+  padding-left: 0px;
+  border-style: none;
+  background-color: gray;
+  color: white;
+}
+input{
+  width:130px;
+  border-style: none;
+}
+button:hover{
+  background-color: lightgrey;
+  transition-duration: 2s;
+}
