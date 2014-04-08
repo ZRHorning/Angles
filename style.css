@@ -11,10 +11,6 @@ fieldset {
   border-style: solid;
   border-radius: 16px;
   text-align: center;
-    display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
 }
 button{
   width: 150px;
