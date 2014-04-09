@@ -14,25 +14,25 @@ function sss(sideb, sidea, sidec) {
     return angles;
 
 }
-
-/*function aas(anglea, angleb, sidea) {
+function aas(anglea, angleb, sidea) {
+    console.log(anglea+angleb);
     var anglec = 180 - (anglea + angleb);
-    var angles = [anglea, angleb, anglec]; //lol an array of angles
-    console.log(angles.length);
+    var angles = [anglea, angleb, anglec];
     for (i = 0; i < angles.length; i++) {
-        angles[i] = angles[i] * (Math.PI / 180); //converts all the angles to degrees
+        angles[i] = angles[i] * (Math.PI / 180);
     }
-    var sideb = (sidea * Math.sin(angles[0])) / Math.sin(angles[1]); //iunn
-    var sidec = (sidea * Math.sin(angles[2])) / Math.sin(angles[1]); //equally lost
+    var sideb = (sidea * Math.sin(angles[0])) / Math.sin(angles[1]);
+    var sidec = (sidea * Math.sin(angles[2])) / Math.sin(angles[1]);
     var thestuff = [angles[2] * (180 / Math.PI), sideb, sidec];
     return thestuff;
-}*/
+}
+
 function AddDiv() {
     var thetriangletodom = sss(side1.value, side2.value, side3.value);
     document.getElementById("container").innerHTML = thetriangletodom;
 }
 function AddDivAAS() {
-    var thetriangletodom = aas(angle1.value, angle2.value, side1.value);
+    var thetriangletodom = aas(angle1.value, angle2.value, sidea.value);
     document.getElementById("container2").innerHTML = thetriangletodom;
 }
 
