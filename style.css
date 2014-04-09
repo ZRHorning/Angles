@@ -2,9 +2,6 @@
   font-family: Lato;
 }
 body{
-  
-  /* -moz-column-width: auto;
-  -moz-column-count: 3; */
   align-items: flex-start;
   justify-content: space-around;
   display: -moz-box
@@ -13,11 +10,9 @@ body{
   display: flex;
 }
 fieldset {
-  
   background-color: whitesmoke;
   border-style: solid;
   border-radius: 16px;
-
 }
 button{
   width: 150px;
