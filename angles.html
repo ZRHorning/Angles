@@ -14,13 +14,28 @@
     <form id="zeform">
       <fieldset><legend>SSS Triangle</legend>
       Side1: 
-      <input type="number" name="side1" id="side1" onchange="AddDiv();">
+      <input type="number"  id="side1" onchange="AddDiv();">
       Side2: 
-      <input type="number" name="side2" id="side2" onchange="AddDiv();">
+      <input type="number"  id="side2" onchange="AddDiv();">
       Side3: 
-      <input type="number" name="side3" id="side3" onchange="AddDiv();">
+      <input type="number"  id="side3" onchange="AddDiv();">
       <br>
       <button type="button" onClick = "AddDiv()">Calculate</button>
+      <br>
+      <button type="button" onClick = "Clear()">Clear</button>
+      <div id="container"></div>
+    </form>
+   
+    <form id="aas">
+      <fieldset><legend>AAS Triangle</legend>
+      Angle1: 
+      <input type="number"  id="angle1" onchange="AddDivAAS();">
+      Angle2: 
+      <input type="number"  id="angle2" onchange="AddDivAAS();">
+      Side1: 
+      <input type="number"  id="side1" onchange="AddDivAAS();">
+      <br>
+      <button type="button" onClick = "AddDivAAS()">Calculate</button>
       <br>
       <button type="button" onClick = "Clear()">Clear</button>
       

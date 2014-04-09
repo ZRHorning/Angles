@@ -9,13 +9,13 @@ body{
   justify-content: space-around;
   display: -moz-box
   display: -webkit-box;
+  flex-flow: row wrap;
 }
 fieldset {
   display: flex;
   background-color: whitesmoke;
   border-style: solid;
   border-radius: 16px;
-  text-align: center;
 
 }
 button{

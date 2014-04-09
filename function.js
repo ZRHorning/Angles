@@ -28,11 +28,15 @@ function aas(anglea, angleb, sidea) {
     return thestuff;
 }
 function AddDiv() {
-    thetriangletodom = sss(side1.value, side2.value, side3.value);
+    var thetriangletodom = sss(side1.value, side2.value, side3.value);
     document.getElementById("container").innerHTML = thetriangletodom;
+}
+function AddDivAAS() {
+    var thetriangletodom = aas(angle1.value, angle2.value, side1.value);
+    document.getElementById("container2").innerHTML = thetriangletodom;
 }
 
 function Clear() {
     document.getElementById("zeform").reset();
-    document.getElementById("container").innerHTML = "";
+    document.getElementsByTagName("div").innerHTML = "";
 }
