@@ -1,10 +1,10 @@
 function sss(sideb, sidea, sidec) {
     var angleb = (Math.pow(sideb, 2) + Math.pow(sidec, 2) - Math.pow(sidea, 2)) / (2 * sideb * sidec);
     //cos angle A
-    angleb = Math.acos(angleb);
+    var angleb = Math.acos(angleb);
     //I AM USING THE MATHS WITH RADS
     var anglea = (Math.pow(sidec, 2) + Math.pow(sidea, 2) - Math.pow(sideb, 2)) / (2 * sidec * sidea);
-    anglea = Math.acos(anglea);
+    var anglea = Math.acos(anglea);
     var anglec = Math.PI - (angleb + anglea);
     var angles = [angleb, anglea, anglec];
     for (i = 0; i < angles.length; i++) {
@@ -37,6 +37,6 @@ function AddDivAAS() {
 }
 
 function Clear() {
-    document.getElementById("zeform").reset();
+    document.getElementsByTagName("form").reset();
     document.getElementsByTagName("div").innerHTML = "";
 }
