@@ -15,7 +15,7 @@ function sss(sideb, sidea, sidec) {
 
 }
 
-function aas(anglea, angleb, sidea) {
+/*function aas(anglea, angleb, sidea) {
     var anglec = 180 - (anglea + angleb);
     var angles = [anglea, angleb, anglec]; //lol an array of angles
     console.log(angles.length);
@@ -26,7 +26,7 @@ function aas(anglea, angleb, sidea) {
     var sidec = (sidea * Math.sin(angles[2])) / Math.sin(angles[1]); //equally lost
     var thestuff = [angles[2] * (180 / Math.PI), sideb, sidec];
     return thestuff;
-}
+}*/
 function AddDiv() {
     var thetriangletodom = sss(side1.value, side2.value, side3.value);
     document.getElementById("container").innerHTML = thetriangletodom;
