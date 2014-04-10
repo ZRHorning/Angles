@@ -32,11 +32,13 @@ function AddDiv() {
     document.getElementById("container").innerHTML = thetriangletodom;
 }
 function AddDivAAS() {
-    var thetriangletodom = aas(angle1.value, angle2.value, sidea.value);
+    var x = Number.parseInt(angle1.value);
+    var y = Number.parseInt(angle2.value);
+    var z = Number.parseInt(sidea.value);
+    var thetriangletodom = aas(x, y, z);
     document.getElementById("container2").innerHTML = thetriangletodom;
 }
-
-function Clear() {
-    document.getElementsByTagName("form").reset();
+function Clear(){
+    document.getElementsByTagName("form").reset;
     document.getElementsByTagName("div").innerHTML = "";
 }

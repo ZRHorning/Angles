@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
   <head>
     <meta charset="utf-8">
@@ -6,41 +6,31 @@
       FUCKING TRIANGLES
     </title>
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
-    
-    <script src="function.js"></script>
+    <script src="function.js" type="text/javascript">
+</script>
   </head>
   <body>
-    <form id="zeform">
-      <fieldset><legend>SSS Triangle</legend>
-      Side1: 
-      <input type="number"  id="side1" onchange="AddDiv();">
-      Side2: 
-      <input type="number"  id="side2" onchange="AddDiv();">
-      Side3: 
-      <input type="number"  id="side3" onchange="AddDiv();">
-      <br>
-      <button type="button" onClick = "AddDiv()">Calculate</button>
-      <br>
-      <button type="button" onClick = "Clear()">Clear</button>
-      <div id="container"></div>
+    <form id="zeform" name="zeform">
+      <fieldset>
+        <legend>SSS Triangle</legend>
+          Side1: <input type="number" id="side1" onchange="AddDiv();">
+          Side2: <input type="number" id="side2" onchange="AddDiv();">
+          Side3: <input type="number" id="side3" onchange="AddDiv();"><br>
+        <button type="button" onclick="AddDiv();">Calculate</button><br>
+        <button type="button" onclick="Clear();">Clear</button>
+        <div id="container"></div>
       </fieldset>
     </form>
-    <form id="aas">
-      <fieldset><legend>AAS Triangle</legend>
-      Angle1: 
-      <input type="number"  id="angle1" onchange="AddDivAAS();">
-      Angle2: 
-      <input type="number"  id="angle2" onchange="AddDivAAS();">
-      Side1: 
-      <input type="number"  id="sidea" onchange="AddDivAAS();">
-      <br>
-      <button type="button" onClick = "AddDivAAS()">Calculate</button>
-      <br>
-      <button type="button" onClick = "Clear()">Clear</button>
-      <div id="container2"></div>
+    <form id="aas" name="aas">
+      <fieldset>
+        <legend>AAS Triangle</legend>
+         Angle1: <input type="number" id="angle1" onchange="AddDivAAS();">
+         Angle2: <input type="number" id="angle2" onchange="AddDivAAS();">
+         Side1: <input type="number" id="sidea" onchange="AddDivAAS();"><br>
+        <button type="button" onclick="AddDivAAS();">Calculate</button><br>
+        <button type="button" onclick="Clear();">Clear</button>
+        <div id="container2"></div>
       </fieldset>
     </form>
-    
-    
   </body>
 </html>
