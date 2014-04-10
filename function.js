@@ -39,6 +39,9 @@ function AddDivAAS() {
     document.getElementById("container2").innerHTML = thetriangletodom;
 }
 function Clear(){
-    document.getElementsByTagName("form").reset;
-    document.getElementsByTagName("div").innerHTML = "";
+    var x = document.getElementsByTagName('div');
+    var i;
+    for (i in x) {
+        x[i].innerHTML = "";
+    }
 }
