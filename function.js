@@ -44,4 +44,16 @@ function Clear(){
     for (i in x) {
         x[i].innerHTML = "";
     }
+function PlotLine(side, angle, startpointx, startpointy){
+    var angle = angle * (Math.PI / 180); //convert degrees to rads
+    var tempx = Math.cos(angle)*side; //get cosine of angle and multiply by length
+    var tempy = Math.sin(angle)*side; //get sine of angle and multiply  by length
+    var x = tempx + startpointx; //add cosine result to starting x coordinate to find endpoint x coordinate
+    var y = tempy + startpointy; //add sine result to starting y coordinate to find endpoint y coodinate
+    var results = [x,y];
+    return results;
+}
+console.log(PlotLine(5,45,0,0));
+function PlotTriangle(sidea,anglea,sideb,angleb,sidec,anglec){
+
 }
